@@ -1,22 +1,15 @@
 
-// ½ûÖ¹°´F12µ÷ÊÔ
+// ç¦æ­¢æŒ‰F12è°ƒè¯•
 document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
 	var e = event || window.event || arguments.callee.caller.arguments[0];
 	if (e && e.keyCode == 123) {
-		mAlert();
+		iziToast.show({
+			timeout: 2000,
+			icon: "fa-solid fa-circle-exclamation",
+			message: 'ä¸ºäº†æµè§ˆä½“éªŒï¼Œæœ¬ç«™ç¦ç”¨F12'
+    	});
 		e.returnValue = false;
 		return (false);
 	}
 }
-function mAlert() {
-	alert("haha");
-}
-
-// ·ÀÖ¹Êó±êÓÒ¼üä¯ÀÀÆ÷¡®¼ì²é¡¯²Ù×÷
-setInterval(function () {
-	debugger;
-}, 100)
-
-// ½ûÖ¹ÓÒ¼ü
-document.oncontextmenu = function () { return false; };
 
