@@ -1,0 +1,3 @@
+User-agent：*
+Allow：所有
+Disallow：暂无
